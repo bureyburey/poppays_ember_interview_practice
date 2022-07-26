@@ -49,6 +49,14 @@ const MyAwesomeButtonComponent = () => {
             </li>
           </ul>
         </li>
+        <li>
+          render the wrapping ember component somewhere
+          <pre>
+                {`
+{{my-awesome-button}}
+`}
+              </pre>
+        </li>
       </ul>
     </div>
   );
