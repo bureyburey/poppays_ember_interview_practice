@@ -6,6 +6,10 @@ const APP_ROUTES = [
     route: 'ember-weather-forecast',
   },
   {
+    name: 'React Playground',
+    route: 'react-playground',
+  },
+  {
     name: 'About',
     route: 'about',
   },
