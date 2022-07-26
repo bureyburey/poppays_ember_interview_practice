@@ -1,0 +1,14 @@
+{{page-title "EmberWeatherForecast"}}
+<h2>Ember Weather Forecast</h2>
+<label for="search-input">
+  City Search
+</label>
+<AutocompleteInput
+  id="search-input"
+  placeholder="Example: Chicago"
+  @value={{this.selection}}
+  @onInput={{this.setSelected}}
+  @search={{this.search}}
+  @options={{this.options}}
+/>
+{{outlet}}

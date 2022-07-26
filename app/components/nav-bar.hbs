@@ -1,0 +1,13 @@
+<nav class="nav-bar">
+  <LinkTo @route="home" class="menu-index">
+    <FaIcon @icon="house"/>
+  </LinkTo>
+  <div class="links">
+    {{#each this.appRoutes as |appRoute|}}
+      <LinkTo @route={{appRoute.route}} class="menu-item {{appRoute.route}}">
+        {{appRoute.name}}
+      </LinkTo>
+    {{/each}}
+  </div>
+</nav>
+{{yield}}

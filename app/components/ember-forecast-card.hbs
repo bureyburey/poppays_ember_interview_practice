@@ -1,0 +1,21 @@
+<div class="forecast-card-container">
+  <div class="forecast-card-date-container">
+    <label>{{this.dateString}}</label>
+  </div>
+  <div class="forecast-card-icon-container">
+    <div>
+      {{svg-jar this.icon}}
+    </div>
+    {{@forecastCard.dayIconPhrase}}
+  </div>
+  <!--  {{svg-jar @forecastCard.nightIconCode}}-->
+  <div>
+    <label>
+      {{format-temperature @forecastCard.minTemp 'C'}}° - {{format-temperature @forecastCard.maxTemp 'C'}}°
+    </label>
+  </div>
+
+
+
+</div>
+{{yield}}

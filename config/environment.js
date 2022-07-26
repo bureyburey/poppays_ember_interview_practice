@@ -2,18 +2,15 @@
 
 module.exports = function (environment) {
   let ENV = {
+    API_KEY: process.env.API_KEY,
     modulePrefix: 'poppays-ember-interview-practice',
     environment,
     rootURL: '/',
-    locationType: 'auto',
+    locationType: 'history',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. EMBER_NATIVE_DECORATOR_SUPPORT: true
-      },
-      EXTEND_PROTOTYPES: {
-        // Prevent Ember Data from overriding Date.parse.
-        Date: false,
       },
     },
 

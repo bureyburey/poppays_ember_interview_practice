@@ -1,0 +1,36 @@
+.nav-bar {
+  min-width: 12%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  background: lightsteelblue;
+
+  a {
+    padding: 10px;
+    color: white;
+
+    text-decoration: unset;
+
+    &.active {
+      color: darkslateblue;
+    }
+  }
+
+
+  .links {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      flex: 1;
+      color: darkslateblue;
+
+      &.active {
+        background: darkslateblue;
+        color: white;
+        font-weight: 500;
+      }
+    }
+  }
+}

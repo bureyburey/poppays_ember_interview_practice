@@ -1,0 +1,11 @@
+.ember-weather-forecast {
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+
+  > .forecast-card-container {
+    margin: 5px;
+    width: 150px;
+    height: 200px;
+  }
+}

@@ -1,0 +1,16 @@
+@import "./nav-bar";
+@import "./loading-indicator";
+@import "./ember-weather-forecast";
+@import "./ember-forecast-card";
+
+body {
+  margin: 0;
+}
+
+.app {
+  display: flex;
+}
+
+.app-content {
+  padding: 10px;
+}
