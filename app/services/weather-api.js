@@ -3,7 +3,7 @@ import { service } from '@ember/service';
 import ENV from 'poppays-ember-interview-practice/config/environment';
 import citiesMock from 'poppays-ember-interview-practice/mock/cities';
 import forecastMock from 'poppays-ember-interview-practice/mock/forecast';
-import { tracked } from "@glimmer/tracking";
+import { tracked } from '@glimmer/tracking';
 
 export default class WeatherApiService extends Service {
   @service store;

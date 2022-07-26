@@ -3,6 +3,11 @@
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
 
+## .env file
+To be able to make requests to the [AccuWeather](https://developer.accuweather.com/) API you should have a .env file in the root folder with the following value:
+<br /><br />
+API_KEY=<your_api_key>
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
