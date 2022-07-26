@@ -16,11 +16,9 @@ module('Integration | Component | checkbox', function (hooks) {
 
     // Template block usage:
     await render(hbs`
-      <Checkbox>
-        template block text
-      </Checkbox>
+      <Checkbox @label="test" />
     `);
 
-    assert.dom(this.element).hasText('template block text');
+    assert.dom(this.element).hasText('test');
   });
 });

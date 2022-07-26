@@ -6,12 +6,22 @@ import { hbs } from 'ember-cli-htmlbars';
 module('Integration | Helper | format-temperature', function (hooks) {
   setupRenderingTest(hooks);
 
-  // TODO: Replace this with your real tests.
-  test('it renders', async function (assert) {
-    this.set('inputValue', '1234');
+  test('it renders fahrenheit', async function (assert) {
+    this.set('inputValue', 30);
 
+    const expected = '30';
     await render(hbs`{{format-temperature this.inputValue}}`);
 
-    assert.dom(this.element).hasText('1234');
+    assert.dom(this.element).hasText(expected);
+  });
+
+  test('it renders celsius', async function (assert) {
+    this.set('inputValue', 30);
+
+    // fahrenheit => celsius calculation
+    const expected = String(Math.round((5 / 9) * (30 - 32)));
+    await render(hbs`{{format-temperature this.inputValue 'C'}}`);
+
+    assert.dom(this.element).hasText(expected);
   });
 });

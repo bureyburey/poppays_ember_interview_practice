@@ -1,15 +1,14 @@
 import Component from '@glimmer/component';
 import { computed } from '@ember/object';
-import moment from 'moment';
 
 export default class EmberForecastCardComponent extends Component {
-  @computed('args.forecastCard.date')
-  get dateString() {
-    return moment(this.args.forecastCard.date).format('DD/MM');
+  @computed('args.forecastCard.{date,dayIconCode}')
+  get dayIcon() {
+    return this.args.forecastCard.dayIconCode;
   }
 
-  @computed('args.forecastCard.{date,dayIconCode}')
-  get icon() {
-    return this.args.forecastCard.dayIconCode;
+  @computed('args.forecastCard.{date,nightIconCode}')
+  get nightIcon() {
+    return this.args.forecastCard.nightIconCode;
   }
 }

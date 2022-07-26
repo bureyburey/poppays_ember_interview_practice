@@ -1,20 +1,26 @@
 <div class="forecast-card-container">
-  <div class="forecast-card-date-container">
-    <label>{{this.dateString}}</label>
-  </div>
-  <div class="forecast-card-icon-container">
-    <div>
-      {{svg-jar this.icon}}
+    <div class="forecast-card-date-container">
+        <label>{{format-date @forecastCard.date}}</label>
     </div>
-    {{@forecastCard.dayIconPhrase}}
-  </div>
-  <!--  {{svg-jar @forecastCard.nightIconCode}}-->
-  <div>
-    <label>
-      {{format-temperature @forecastCard.minTemp @temperatureUnit}}° - {{format-temperature @forecastCard.maxTemp @temperatureUnit}}°
-    </label>
-  </div>
-
+    <div class="forecast-card-icons-container">
+        <div class="forecast-card-icon">
+            Day
+            {{svg-jar this.dayIcon}}
+            {{@forecastCard.dayIconPhrase}}
+        </div>
+        <div class="forecast-card-icon">
+            Night
+            {{svg-jar this.nightIcon}}
+            {{@forecastCard.nightIconPhrase}}
+        </div>
+    </div>
+    <!--  {{svg-jar @forecastCard.nightIconCode}}-->
+    <div>
+        <label>
+            {{format-temperature @forecastCard.minTemp @temperatureUnit}}° - {{format-temperature @forecastCard.maxTemp
+                                                                                                  @temperatureUnit}}°
+        </label>
+    </div>
 
 
 </div>

@@ -4,9 +4,17 @@
   justify-content: center;
 
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 
   > .forecast-cards-container {
     display: flex;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .ember-weather-forecast {
+    > .forecast-cards-container {
+      flex-direction: column;
+    }
   }
 }
