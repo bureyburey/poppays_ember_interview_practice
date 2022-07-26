@@ -1,7 +1,9 @@
 {{page-title "Location"}}
 <h3>Ember Weather Forecast Location</h3>
+<Checkbox @label={{'Show in Celsius'}} @onSetChecked={{action this.setCelsiusChecked}} />
 <EmberWeatherForecast
-  @emberForecastCards={{@model.emberForecastCards}}
+        @emberForecastCards={{@model.emberForecastCards}}
+        @temperatureUnit={{this.temperatureUnit}}
 />
 
 {{outlet}}

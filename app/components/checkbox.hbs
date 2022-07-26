@@ -1,0 +1,7 @@
+<div class="checkbox-container" onclick={{action this.setChecked}}>
+    <input checked={{this.checked}} type="checkbox"/>
+    {{#if @label}}
+        <label>{{@label}}</label>
+    {{/if}}
+</div>
+{{yield}}

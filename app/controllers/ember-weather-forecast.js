@@ -3,13 +3,11 @@ import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 import { service } from '@ember/service';
 
-import { pause } from '../utils';
-
 export default class EmberWeatherForecastController extends Controller {
+  @service router;
   @service weatherApi;
   @tracked options = [];
   @tracked selection = null;
-  @tracked forecast = null;
 
   @action
   async search(query) {
@@ -29,7 +27,7 @@ export default class EmberWeatherForecastController extends Controller {
 
   @action
   getForecast(selection) {
-    this.target.transitionTo(
+    this.router.transitionTo(
       `/ember-weather-forecast/location/${selection.id}`
     );
   }

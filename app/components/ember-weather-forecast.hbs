@@ -1,10 +1,11 @@
 <div class="ember-weather-forecast">
-  {{#if this.loading}}
-    <LoadingIndicator/>
-  {{else if @emberForecastCards}}
-    <EmberForecastContainer
-      @emberForecastCards={{@emberForecastCards}}
-    />
-  {{/if}}
+    {{#if this.loading}}
+        <LoadingIndicator/>
+    {{else if @emberForecastCards}}
+        <EmberForecastContainer
+                @emberForecastCards={{@emberForecastCards}}
+                @temperatureUnit={{@temperatureUnit}}
+        />
+    {{/if}}
 </div>
 {{yield}}

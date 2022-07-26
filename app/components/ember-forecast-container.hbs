@@ -1,4 +1,9 @@
-{{#each @emberForecastCards as |emberForecastCard|}}
-  <EmberForecastCard @forecastCard={{emberForecastCard}} />
-{{/each}}
+<div class="forecast-cards-container">
+    {{#each @emberForecastCards as |emberForecastCard|}}
+        <EmberForecastCard
+                @forecastCard={{emberForecastCard}}
+                @temperatureUnit={{@temperatureUnit}}
+        />
+    {{/each}}
+</div>
 {{yield}}
