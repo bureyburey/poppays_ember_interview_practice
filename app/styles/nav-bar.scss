@@ -25,6 +25,7 @@
     a {
       flex: 1;
       color: darkslateblue;
+      justify-content: flex-start;
 
       &.active {
         background: darkslateblue;
