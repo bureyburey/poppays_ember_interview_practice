@@ -9,7 +9,10 @@ module.exports = function (defaults) {
       implementation: nodeSass,
     },
     babel: {
-      plugins: ['transform-class-properties', 'transform-react-jsx'],
+      plugins: [
+        // 'transform-class-properties',
+        'transform-react-jsx',
+      ],
     },
   });
 
