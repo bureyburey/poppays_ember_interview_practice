@@ -10,7 +10,7 @@ module.exports = function (defaults) {
     },
     babel: {
       plugins: [
-        // 'transform-class-properties',
+        '@babel/plugin-proposal-class-properties',
         'transform-react-jsx',
       ],
     },
