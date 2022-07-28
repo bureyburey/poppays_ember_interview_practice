@@ -1,16 +1,16 @@
 import React from 'react';
 import ReactComponent from './react-component';
 import { action } from '@ember/object';
-import { NavLink } from '../react-components/nav-link';
+import { NavLink } from '../react/components/nav-link';
 
 const TestReact = ({ name }) => {
   return (
     <div>
       Hi <b>{name}</b>, Welcome to EmbeReact!
       <div>
-        <NavLink to="/ember-weather-forecast/location/215854">
-          Go to forecast
-        </NavLink>
+        {/*<NavLink to="/ember-weather-forecast/location/215854">*/}
+        {/*  Go to forecast*/}
+        {/*</NavLink>*/}
       </div>
       <div>
         <a href="/ember-weather-forecast/location/215854">
@@ -24,6 +24,6 @@ const TestReact = ({ name }) => {
 export default class TestReactComponent extends ReactComponent {
   @action
   didInsert(element) {
-    this.reactRender(element, <TestReact name="GenericSoundingName"/>);
+    this.reactRender(element, <TestReact name="GenericSoundingName" />);
   }
 }

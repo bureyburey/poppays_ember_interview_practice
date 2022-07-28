@@ -14,4 +14,5 @@ Router.map(function () {
   this.route('about');
   this.route('ember-forecast-card');
   this.route('react-playground');
+  this.route('empty', { path: '/*path' });
 });
