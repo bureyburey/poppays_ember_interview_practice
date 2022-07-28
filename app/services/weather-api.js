@@ -5,7 +5,7 @@ import ENV from 'poppays-ember-interview-practice/config/environment';
 import citiesMock from 'poppays-ember-interview-practice/mock/cities';
 import forecastMock from 'poppays-ember-interview-practice/mock/forecast';
 
-const USE_MOCK = false;
+const USE_MOCK = true;
 const API_HOST = 'http://dataservice.accuweather.com';
 
 export default class WeatherApiService extends Service {

@@ -12,6 +12,7 @@ module.exports = function (defaults) {
       plugins: [
         '@babel/plugin-proposal-class-properties',
         'transform-react-jsx',
+        require.resolve('ember-auto-import/babel-plugin'),
       ],
     },
   });

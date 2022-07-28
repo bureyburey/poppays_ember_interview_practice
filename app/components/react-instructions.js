@@ -8,23 +8,35 @@ const ReactInstructions = () => {
       <h3>Steps to adding new React component</h3>
       <ul>
         <li>
-          generate ember component + component class => <b>ember generate component -cc {'<'}component-name{'>'}</b>
+          generate ember component + component class =>{' '}
+          <b>
+            ember generate component -cc {'<'}component-name{'>'}
+          </b>
         </li>
-        <li>Example: <b>ember generate component -cc my-awesome-button</b></li>
+        <li>
+          Example: <b>ember generate component -cc my-awesome-button</b>
+        </li>
         <li>
           in the my-awesome-button.hbs: add the following div
-          <pre>
-            {`<div {{did-insert this.didInsert}}/>`}
-          </pre>
+          <pre>{`<div {{did-insert this.didInsert}}/>`}</pre>
         </li>
         <li>
           in the my-awesome-button.js:
           <ul>
-            <li>add on top of the file: <b>import ReactComponent from './react-component';</b></li>
             <li>
-              <b>export default class MyAwesomeButtonComponent extends <span style={{color: 'red'}}>Component</span></b>
+              add on top of the file:{' '}
+              <b>import ReactComponent from './react-component';</b>
+            </li>
+            <li>
+              <b>
+                export default class MyAwesomeButtonComponent extends{' '}
+                <span style={{ color: 'red' }}>Component</span>
+              </b>
               &nbsp;&nbsp;=>&nbsp;&nbsp;
-              <b>export default class MyAwesomeButtonComponent extends <span style={{color: 'green'}}>ReactComponent</span></b>
+              <b>
+                export default class MyAwesomeButtonComponent extends{' '}
+                <span style={{ color: 'green' }}>ReactComponent</span>
+              </b>
             </li>
             <li>
               add the following code inside the class
@@ -52,10 +64,10 @@ const MyAwesomeButtonComponent = () => {
         <li>
           render the wrapping ember component somewhere
           <pre>
-                {`
+            {`
 {{my-awesome-button}}
 `}
-              </pre>
+          </pre>
         </li>
       </ul>
     </div>

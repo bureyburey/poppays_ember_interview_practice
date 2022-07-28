@@ -1,0 +1,13 @@
+import Controller from '@ember/controller';
+import { service } from '@ember/service';
+
+export default class ApplicationController extends Controller {
+  @service router;
+
+  init() {
+    super.init(...arguments);
+    window.emberServices = {
+      router: this.router,
+    };
+  }
+}
